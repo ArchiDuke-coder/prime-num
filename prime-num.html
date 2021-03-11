@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let text = '20 số nguyên tố đầu tiên là: '
+    let targetNum = 20;
+    let numPrime = 0;
+    var num = 2;
+    while (numPrime<targetNum){
+        if (checkPrime(num)){
+            numPrime++;
+        }
+        num++;
+    }
+    document.write(text);
+
+
+
+    function checkPrime(num){
+        for (var i=2; i<num;){
+            if (num%i == 0){
+                return false
+                break;
+            }
+            i++;
+        }
+        if (i == num){
+            text = text + num + ', ';
+            return true
+        }
+    }
+</script>
